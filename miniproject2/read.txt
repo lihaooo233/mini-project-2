@@ -1,0 +1,8 @@
+There are two trained modules (mode1 and mode2). Mode1 used 3 convolution layers and 2 all-connection
+layers, and the accuracy which tested by 200 photos is 75%. And the mode2 used 5 convolution layers
+and 2 all-connection layers, and the accuracy is 76.2%. So we could see that with same training 
+epoch(which is 30 and 600 photos for training), mode2 which has more parameters than mode1, spent a 
+more time for training and have a better validation accuracy and test accuracy. But the improvement
+is still limited. I believe the main reason of that is the training photos are too typical and have little
+change may reduce the test accuracy. So I believe adding more photos with different types may improve the 
+test accuracy better. 
