@@ -61,7 +61,7 @@ def get_data():
     return (get_image(x_train, y_train)), (get_image(x_val, y_val)), (get_image(x_test, y_test))
 
 
-def setup_network2():
+def setup_network2():   #mode2 has 5 conv layers
     model = keras.models.Sequential([
         # keras.layers.Dense(16, activation=tf.nn.relu, input_shape=(NUM_WORDS,)),
         # keras.layers.Dropout(0.5),
@@ -74,7 +74,7 @@ def setup_network2():
                             trainable=True,
                             #  (height, width, channels)
                             input_shape=(HEIGHT, WIDTH, 1),
-                            # 如果 data_format='channels_last'， 输入 4D 张量，尺寸为 (batchsize, rows, cols, channels)。
+                           
                             data_format="channels_last"),
         keras.layers.MaxPool2D(pool_size=(2, 2), padding='same'),
 
@@ -123,7 +123,7 @@ def setup_network2():
     return model
 
 
-def setup_network1():
+def setup_network1(): # mode1 has 3 conv layers
     model = keras.models.Sequential([
         # keras.layers.Dense(16, activation=tf.nn.relu, input_shape=(NUM_WORDS,)),
         # keras.layers.Dropout(0.5),
@@ -136,7 +136,7 @@ def setup_network1():
                             trainable=True,
                             #  (height, width, channels)
                             input_shape=(HEIGHT, WIDTH, 1),
-                            # 如果 data_format='channels_last'， 输入 4D 张量，尺寸为 (batchsize, rows, cols, channels)。
+                           
                             data_format="channels_last"),
         keras.layers.MaxPool2D(pool_size=(2, 2), padding='same'),
 
@@ -160,7 +160,7 @@ def setup_network1():
         # keras.layers.Dense(2, activation=tf.nn.softmax)
         keras.layers.Dense(1, activation=tf.nn.sigmoid)
     ])
-    model.compile(optimizer='adam',
+    model.compile(optimizer='adam', #optimizer,loss,accuracy
                   loss='binary_crossentropy',
                   metrics=['accuracy', "binary_crossentropy"]
                   # loss="categorical_crossentropy",
@@ -228,7 +228,3 @@ if __name__ == "__main__":
         save_model2()
     test_loss, test_acc, _ = model.evaluate(x_test, y_test)
     print(test_loss, test_acc, _)
-    # other_images = get_test_data()
-    # labels = predict(model, other_images)
-    # print(labels)
-    # print(class_[i] for i in labels)
