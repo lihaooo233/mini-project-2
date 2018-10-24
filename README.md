@@ -2,11 +2,18 @@
 Hello everyone! 
 This is project 2 of EC601, and I will show you how to use it now.
 
-# Instruction
+# Instruction（how to use）
 
 Open the file 'project2', and we could find a rar file 'sunflower.rar', I have already stored all my photos here. So you should unzip the file first or you can not test the accuracy of the modules.
 
-I have trained 2 modules and when you execute the .py file 'project2.py' you could select which module you want to test... The two module I will introduce those two modules latter.
+I have trained 2 modules and when you execute the .py file 'project2.py' you could select which module you want to test... I will introduce those two modules latter.
+ 
+ # Idea of this program
+ 
+  I used 500 photos of sunflowers and 500 photos of roses as my training data(300 photos each class),validation data(100 photos each class) and test data(100 photos). In order to guarantee the effect of training, I randomize the order of input(training data) and validation data.
+  
+ 
+ 
  
  
  # About Modules and Comparsion
