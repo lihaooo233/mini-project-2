@@ -8,12 +8,10 @@ Open the file 'project2', and we could find a rar file 'sunflower.rar', I have a
 
 I have trained 2 modules and when you execute the .py file 'project2.py' you could select which module you want to test... I will introduce those two modules latter.
  
- # Idea of this program
+ # Ideas of this program
  
-  I used 500 photos of sunflowers and 500 photos of roses as my training data(300 photos each class),validation data(100 photos each class) and test data(100 photos). In order to guarantee the effect of training, I randomize the order of input(training data) and validation data.
+  I used 500 photos of sunflowers and 500 photos of roses as my training data(300 photos each class),validation data(100 photos each class) and test data(100 photos). In order to guarantee the effect of training, I randomize the order of input(training data) and validation data. Because the number of training photos is only 600, so I only set 30 epochs to train the data and validation accuracy seems to be stable.
   
- 
- 
  
  
  # About Modules and Comparsion
